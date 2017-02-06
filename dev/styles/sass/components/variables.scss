@@ -22,3 +22,6 @@ $desktop-and-up: "only screen and (min-width : #{$tablet-screen-up})" !default;
 $phone-and-down: "only screen and (max-width : #{$phone-screen})" !default;
 $tablet-and-down: "only screen and (max-width : #{$tablet-screen})" !default;
 $tablet-only: "only screen and (min-width : #{$phone-screen-up}) and (max-width : #{$tablet-screen})" !default;
+
+$num-cols: 12 !default;
+$gutter: 2rem !default;

@@ -115,8 +115,8 @@ function backgroundDraw() {
 		requestAnimationFrame(animate);
 	}
 	function shiftPoint(p) {
-		TweenLite.to(p, 1+1*Math.random(), {x:p.originX + getRandomInt(-50, 50),
-			y: p.originY - getRandomInt(-50, 50), ease:Circ.easeInOut,
+		TweenLite.to(p, 1+1*Math.random(), {x:p.originX + getRandomInt(-10, 10),
+			y: p.originY - getRandomInt(-10, 10), ease:Circ.easeInOut,
 			onComplete: function() {
 				shiftPoint(p);
 			}});
@@ -167,8 +167,20 @@ $(document).ready(function() {
 		navigation: true,
 		navigationPosition: 'right',
 		keyboardScrolling: true,
+		verticalCentered: false,
+		sectionSelector: '.fp-section',
+		slideSelector: '.fp-slide',
 		onLeave: function(index, nextIndex, direction){
 		}
 	});
 
+	$('#ifsp-title').typeIt({
+		strings: ["Semana da Computação", "2017"],
+		speed: 50,
+		autoStart: false
+	}); 
+
+	$('.down').click(function () {
+		$.fn.fullpage.moveSectionDown();
+	});
 });

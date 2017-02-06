@@ -30,7 +30,8 @@ gulp.task('jslib', function() {
 	return gulp.src(['./node_modules/jquery/dist/jquery.js', 
 		'./node_modules/gsap/src/uncompressed/easing/EasePack.js', 
 		'./node_modules/gsap/src/uncompressed/TweenLite.js', 
-		'./node_modules/fullpage.js/dist/jquery.fullpage.js'])
+		'./node_modules/fullpage.js/dist/jquery.fullpage.js',
+		'./node_modules/typeit/dist/typeit.js',])
 	.pipe(concat('lib.js'))
 	// .pipe(uglify())
 	// .pipe(rename({suffix: '.min'}))
@@ -46,7 +47,7 @@ gulp.task('csslib', function() {
 });
 
 gulp.task('js', function() {
-	return gulp.src(['./dev/scripts/ifsp.js'])
+	return gulp.src(['./dev/scripts/maps.js', './dev/scripts/ifsp.js'])
 	.pipe(concat('ifsp.js'))
 	// .pipe(uglify())
 	// .pipe(rename({suffix: '.min'}))

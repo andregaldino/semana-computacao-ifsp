@@ -19,5 +19,65 @@ html {
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
-    background: #FAFAFA;
+	background: #FAFAFA;
+}
+
+.map-container {
+	position: relative;
+	z-index: 1;
+}
+
+#map-canvas {
+	width: 100%;
+	height: 300px;
+}
+
+@media (max-width: 992px) { 	
+	#map-canvas {
+		height: 300px;
+	}
+}
+
+.directions {	
+	position: absolute;
+	top: 100px;
+	left: 10px;
+	padding: 0 0.8rem;
+	text-align: center;
+	margin: 0 5px;
+}
+
+.logo {
+	width: 300px;
+}
+
+.valign-wrapper {
+	display: flex;
+	align-items: center;
+
+	.valign {
+		display: block;
+	}
+}
+
+.down {
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 36px);
+	text-align: center;
+	& i {
+		font-size: 5rem;
+	}
+
+	&:hover {
+		opacity: 1 !important;
+	}
+
+	animation: blink 2s ease-in infinite;
+}
+
+@keyframes blink {
+	from, to { opacity: 1 }
+	50% { opacity: 0.2 }
 }

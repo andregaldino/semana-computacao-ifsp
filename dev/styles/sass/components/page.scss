@@ -22,6 +22,10 @@ html {
 	background: #FAFAFA;
 }
 
+.fp-section {
+	position: relative
+}
+
 .map-container {
 	position: relative;
 	z-index: 1;
@@ -48,7 +52,16 @@ html {
 }
 
 .logo {
-	width: 300px;
+	position: fixed;
+	top: 50px;
+	left: calc(50% - 160px);
+	width: 380px;
+}
+
+.register {
+	position: absolute;
+	bottom: 70px;
+	left: calc(50% - 94px);
 }
 
 .valign-wrapper {

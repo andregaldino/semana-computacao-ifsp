@@ -987,6 +987,28 @@ h1, h2, h3, h4, h5, h6 {
 .italic {
   font-style: italic; }
 
+.btn {
+  display: inline-block;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 18px;
+  margin: 12px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #FFFFFF;
+  color: #000;
+  font-family: 'Joystix'; }
+  .btn:hover, .btn:focus {
+    background-color: #FAFAFA; }
+
 .left-align {
   text-align: left; }
 
@@ -1001,6 +1023,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .right {
   float: right !important; }
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
 
 html {
   overflow: hidden; }
@@ -1022,6 +1048,9 @@ html {
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background: #FAFAFA; }
 
+.fp-section {
+  position: relative; }
+
 .map-container {
   position: relative;
   z-index: 1; }
@@ -1042,7 +1071,15 @@ html {
   margin: 0 5px; }
 
 .logo {
-  width: 300px; }
+  position: fixed;
+  top: 50px;
+  left: calc(50% - 160px);
+  width: 380px; }
+
+.register {
+  position: absolute;
+  bottom: 70px;
+  left: calc(50% - 94px); }
 
 .valign-wrapper {
   display: flex;

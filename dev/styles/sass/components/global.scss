@@ -17,3 +17,8 @@
 .right {
 	float: right !important;
 }
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}

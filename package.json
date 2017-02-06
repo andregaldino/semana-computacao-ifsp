@@ -2,9 +2,13 @@
   "name": "semana_comp",
   "version": "1.0.0",
   "description": "Página para a semana da computação do IFSP Piracicaba",
-  "main": "server.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rfoel/semana-computacao-ifsp.git"
   },
   "author": "Rafael Franco",
   "license": "MIT",
@@ -19,8 +23,5 @@
     "gulp-uglify": "^2.0.1",
     "gulp-uglifycss": "^1.0.6",
     "jquery": "^3.1.1"
-  },
-  "dependencies": {
-    "express": "^4.14.1"
   }
 }

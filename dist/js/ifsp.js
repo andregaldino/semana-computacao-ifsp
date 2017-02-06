@@ -168,7 +168,6 @@ $(document).ready(function() {
 		navigationPosition: 'right',
 		keyboardScrolling: true,
 		onLeave: function(index, nextIndex, direction){
-			// backgroundDraw();
 		}
 	});
 

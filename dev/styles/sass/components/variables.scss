@@ -1,0 +1,24 @@
+$text-color: #f5f5f5 !default;
+
+$OpenSansPath: "../fonts" !default;
+$OpenSansVersion: "1.1.0" !default; 
+
+$h1-fontsize: 4.2rem !default;
+$h2-fontsize: 3.56rem !default;
+$h3-fontsize: 2.92rem !default;
+$h4-fontsize: 2.28rem !default;
+$h5-fontsize: 1.64rem !default;
+$h6-fontsize: 1rem !default;
+
+$phone-screen-up: 601px !default;
+$tablet-screen-up: 961px !default;
+$desktop-screen-up: 1281px !default;
+$phone-screen: 600px !default;
+$tablet-screen: 960px !default;
+$desktop-screen: 1280px !default;
+
+$tablet-and-up: "only screen and (min-width : #{$phone-screen-up})" !default;
+$desktop-and-up: "only screen and (min-width : #{$tablet-screen-up})" !default;
+$phone-and-down: "only screen and (max-width : #{$phone-screen})" !default;
+$tablet-and-down: "only screen and (max-width : #{$tablet-screen})" !default;
+$tablet-only: "only screen and (min-width : #{$phone-screen-up}) and (max-width : #{$tablet-screen})" !default;

@@ -1073,8 +1073,8 @@ html {
 .logo {
   position: fixed;
   top: 50px;
-  left: calc(50% - 160px);
-  width: 380px; }
+  left: calc(50% - 175px);
+  width: 350px; }
 
 .register {
   position: absolute;

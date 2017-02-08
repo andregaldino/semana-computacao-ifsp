@@ -221,7 +221,12 @@ $(document).ready(function() {
 		verticalCentered: false,
 		sectionSelector: '.fp-section',
 		slideSelector: '.fp-slide',
+		controlArrows: false,
 		onLeave: function(index, nextIndex, direction){
+		},
+		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+			$('.weekdays .btn[data-day='+slideIndex+']').addClass('outline');
+			$('.weekdays .btn[data-day='+nextSlideIndex+']').removeClass('outline');
 		}
 	});
 
@@ -233,5 +238,27 @@ $(document).ready(function() {
 
 	$('.down').click(function () {
 		$.fn.fullpage.moveSectionDown();
+	});
+
+
+	var scrollTo = 0;
+
+	$('.weekdays .btn').click(function () {
+		$this = $(this);
+		$.fn.fullpage.moveTo(2, $this.data('day'));
+
+		if($(window).width() < 710){
+			var item = $this.parent();
+			scrollTo =- item.position().left + $('.weekdays').width() / 2 - item.width() / 2;
+			$('.weekdays ul').css('transform', 'translateX(' + scrollTo + 'px)');
+		} else {
+			$('.weekdays ul').css('transform', 'translateX(' + 0 + 'px)');
+		}
+	});
+
+	$(window).resize(function() {
+		if($(window).width() >= 710){
+			$('.weekdays ul').css('transform', 'translateX(' + 0 + 'px)');
+		}
 	});
 });

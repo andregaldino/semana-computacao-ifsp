@@ -16,9 +16,22 @@
 	-webkit-tap-highlight-color: transparent;
 	background-color: #FFFFFF;
 	color: #000;
-    font-family: 'Joystix';
+	font-family: 'Joystix';
+	border: 2px solid transparent;
 
 	&:hover, &:focus {
-	background-color: #FAFAFA;
+		background-color: #FAFAFA;
+	}
+
+	&.outline {
+		background-color: transparent;
+		color: #FFFFFF;
+		border-color: #FFFFFF;
+
+		&:hover, &:focus {
+			background-color: #FFFFFF;
+			color: #000;
+			border-color: transparent;
+		}
 	}
 }

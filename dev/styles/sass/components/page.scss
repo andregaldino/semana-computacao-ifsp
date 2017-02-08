@@ -26,6 +26,10 @@ html {
 	position: relative
 }
 
+.fp-section > h2 {
+	padding-top: 2rem;
+}
+
 .map-container {
 	position: relative;
 	z-index: 1;
@@ -93,4 +97,40 @@ html {
 @keyframes blink {
 	from, to { opacity: 1 }
 	50% { opacity: 0.2 }
+}
+
+.weekdays {
+	overflow: hidden;
+}
+
+.weekdays ul {
+	white-space: nowrap;
+	transition: all ease 750ms;
+	position:relative;
+	overflow: visible;
+}
+
+
+
+.schedule li {
+	padding: 20px 0;
+	font-size: 2rem;
+}
+
+.schedule .time {
+	font-family: 'Joystix';
+}
+
+@media only screen and (max-width: $phone-screen) {
+	.schedule li {
+		padding: 5px 0;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: $tablet-screen) {
+	.schedule li {
+		padding: 15px 0;
+		font-size: 1.4rem;
+	}
 }

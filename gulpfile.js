@@ -5,8 +5,9 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
 var imagemin = require('gulp-imagemin');
+var browserSync = require('browser-sync').create();
 
-gulp.task('default', ['sass', 'js', 'images']);
+gulp.task('default', ['sass', 'js', 'watch', 'server']);
 
 gulp.task('watch', function() {
 	gulp.watch('./dev/styles/**/*', ['sass']);
@@ -52,6 +53,16 @@ gulp.task('js', function() {
 	// .pipe(uglify())
 	// .pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('./dist/js/'));
+});
+
+gulp.task('server', function() {
+  browserSync.init({
+    files: ['./dist/**','./*.html'],
+    port: '8888',
+    server: {
+      baseDir: ['dist', './']
+    }
+  })
 });
 
 gulp.task('images', function() {

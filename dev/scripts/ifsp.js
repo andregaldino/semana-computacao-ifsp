@@ -164,8 +164,7 @@ $(document).ready(function() {
 	backgroundDraw();
 
 	$('#fullpage').fullpage({
-		navigation: true,
-		navigationPosition: 'right',
+		navigation: false,
 		keyboardScrolling: true,
 		verticalCentered: false,
 		sectionSelector: '.fp-section',
@@ -205,9 +204,24 @@ $(document).ready(function() {
 		}
 	});
 
+	$('nav a').click(function () {
+		$this = $(this);
+		if($this.data('section'))
+			$.fn.fullpage.moveTo($this.data('section'));
+	});
+
 	$(window).resize(function() {
 		if($(window).width() >= 710){
 			$('.weekdays ul').css('transform', 'translateX(' + 0 + 'px)');
 		}
+	});
+
+	$('.toggle').on('click', function () {
+		var nav = '#'+$(this).data('activates');
+		$(nav).toggleClass('visible');
+	});
+
+	$('.navbar-side li a').click(function () {
+		$('.navbar-side').toggleClass('visible');
 	});
 });

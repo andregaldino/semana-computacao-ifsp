@@ -43,7 +43,7 @@ function initialize() {
 	marker = new MarkerWithLabel({
 		draggable: false,
 		map: map,
-		icon: new google.maps.MarkerImage('./dist/images/mouse.svg', null, null, null, new google.maps.Size(40,40)),
+		icon: new google.maps.MarkerImage('./dist/images/ifsp-icon.svg', null, null, null, new google.maps.Size(40,40)),
 		position: center
 	});
 }

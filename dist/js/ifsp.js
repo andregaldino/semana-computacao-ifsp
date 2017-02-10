@@ -43,7 +43,7 @@ function initialize() {
 	marker = new MarkerWithLabel({
 		draggable: false,
 		map: map,
-		icon: new google.maps.MarkerImage('./dist/images/mouse.svg', null, null, null, new google.maps.Size(40,40)),
+		icon: new google.maps.MarkerImage('./dist/images/ifsp-icon.svg', null, null, null, new google.maps.Size(40,40)),
 		position: center
 	});
 }
@@ -215,8 +215,7 @@ $(document).ready(function() {
 	backgroundDraw();
 
 	$('#fullpage').fullpage({
-		navigation: true,
-		navigationPosition: 'right',
+		navigation: false,
 		keyboardScrolling: true,
 		verticalCentered: false,
 		sectionSelector: '.fp-section',
@@ -256,9 +255,24 @@ $(document).ready(function() {
 		}
 	});
 
+	$('nav a').click(function () {
+		$this = $(this);
+		if($this.data('section'))
+			$.fn.fullpage.moveTo($this.data('section'));
+	});
+
 	$(window).resize(function() {
 		if($(window).width() >= 710){
 			$('.weekdays ul').css('transform', 'translateX(' + 0 + 'px)');
 		}
+	});
+
+	$('.toggle').on('click', function () {
+		var nav = '#'+$(this).data('activates');
+		$(nav).toggleClass('visible');
+	});
+
+	$('.navbar-side li a').click(function () {
+		$('.navbar-side').toggleClass('visible');
 	});
 });

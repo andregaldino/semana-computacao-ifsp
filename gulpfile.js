@@ -15,7 +15,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('fonts', function() {
-	return gulp.src(['./dev/fonts/**'])
+	return gulp.src(['./dev/fonts/**', './node_modules/material-design-icons/iconfont/*.{eot,ttf,woff, woff2}'])
 	.pipe(gulp.dest('./dist/fonts/'));
 });
 

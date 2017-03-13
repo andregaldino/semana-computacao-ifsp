@@ -115,6 +115,10 @@ html {
 .schedule li {
 	padding: 20px 0;
 	font-size: 2rem;
+
+	& a {
+		font-size: 1rem;
+	}
 }
 
 .schedule .time {

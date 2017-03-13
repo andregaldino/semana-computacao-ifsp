@@ -15,7 +15,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('fonts', function() {
-	return gulp.src(['./dev/fonts/**', './node_modules/material-design-icons/iconfont/*.{eot,ttf,woff, woff2}'])
+	return gulp.src(['./dev/fonts/**', './node_modules/material-design-icons/iconfont/**.{eot,ttf,woff, woff2}'])
 	.pipe(gulp.dest('./dist/fonts/'));
 });
 
@@ -32,7 +32,9 @@ gulp.task('jslib', function() {
 		'./node_modules/gsap/src/uncompressed/easing/EasePack.js', 
 		'./node_modules/gsap/src/uncompressed/TweenLite.js', 
 		'./node_modules/fullpage.js/dist/jquery.fullpage.js',
-		'./node_modules/typeit/dist/typeit.js',])
+		'./node_modules/typeit/dist/typeit.js',
+		'./dev/scripts/velocity.min.js',
+		'./dev/scripts/modal.js',])
 	.pipe(concat('lib.js'))
 	// .pipe(uglify())
 	// .pipe(rename({suffix: '.min'}))

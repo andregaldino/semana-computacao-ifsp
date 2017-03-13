@@ -81,9 +81,6 @@ function backgroundDraw() {
 		}
 		target.x = posx;
 		target.y = posy;
-
-		console.log(posx/width);
-		console.log(posy/height);
 	}
 	function scrollCheck() {
 		if(document.body.scrollTop > height) animateHeader = false;
@@ -224,4 +221,6 @@ $(document).ready(function() {
 	$('.navbar-side li a').click(function () {
 		$('.navbar-side').toggleClass('visible');
 	});
+
+	$('.modal').modal();
 });

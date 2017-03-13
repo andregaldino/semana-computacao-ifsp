@@ -908,6 +908,7 @@ template {
   width: 55%;
   margin: auto;
   overflow-y: auto;
+  color: #000 !important;
   border-radius: 2px;
   will-change: top, opacity; }
   @media only screen and (max-width: 960px) {

@@ -171,6 +171,7 @@ function backgroundDraw() {
 	}
 	function fauxZoom(p) {
 		center = target;
+		console.log(center);
 
 	}
 	function drawLines(p) {

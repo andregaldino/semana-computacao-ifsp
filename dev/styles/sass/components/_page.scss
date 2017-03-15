@@ -31,6 +31,10 @@ html {
 	padding-top: 2rem;
 }
 
+.fp-slides {
+	height: auto
+}
+
 .map-container {
 	position: relative;
 	z-index: 1;
@@ -39,7 +43,7 @@ html {
 #map-canvas {
 	margin: 50px 0;
 	width: 100%;
-	height: 500px;
+	height: 400px;
 }
 
 @media (max-width: 992px) { 	
@@ -50,11 +54,18 @@ html {
 
 .directions {	
 	position: absolute;
-	top: 100px;
+	top: 10px;
 	left: 10px;
-	padding: 0 0.8rem;
+	z-index: 99;
 	text-align: center;
-	margin: 0 5px;
+	height: 50px;
+	line-height: 46px;
+	padding: 0 5px;
+
+	i {
+		padding: 0 5px;
+		vertical-align: middle
+	}
 }
 
 .logo {
@@ -122,6 +133,7 @@ html {
 }
 
 .schedule .time {
+	font-size: 1.5rem;
 	font-family: 'Joystix';
 }
 
@@ -140,9 +152,20 @@ html {
 }
 
 .address {
-	font-size: 2rem;
+	font-size: 1.5rem;
+
+	i {
+		vertical-align: middle
+	}
 }
 
-.address span {
-	font-family: 'Joystix';
+.developer {
+	display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 999;
 }

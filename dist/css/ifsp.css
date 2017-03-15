@@ -1125,7 +1125,11 @@ html {
 
 a {
   text-decoration: none;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  color: #fff; }
+  a.know-more {
+    font-family: 'Joystix';
+    font-size: 1.5rem !important; }
 
 ul {
   padding-left: 0;
@@ -1373,6 +1377,9 @@ html {
 .fp-section > h2 {
   padding-top: 2rem; }
 
+.fp-slides {
+  height: auto; }
+
 .map-container {
   position: relative;
   z-index: 1; }
@@ -1380,18 +1387,23 @@ html {
 #map-canvas {
   margin: 50px 0;
   width: 100%;
-  height: 500px; }
+  height: 400px; }
 
 @media (max-width: 992px) {
   #map-canvas {
     height: 300px; } }
 .directions {
   position: absolute;
-  top: 100px;
+  top: 10px;
   left: 10px;
-  padding: 0 0.8rem;
+  z-index: 99;
   text-align: center;
-  margin: 0 5px; }
+  height: 50px;
+  line-height: 46px;
+  padding: 0 5px; }
+  .directions i {
+    padding: 0 5px;
+    vertical-align: middle; }
 
 .logo {
   position: fixed;
@@ -1443,6 +1455,7 @@ html {
     font-size: 1rem; }
 
 .schedule .time {
+  font-size: 1.5rem;
   font-family: 'Joystix'; }
 
 @media only screen and (max-width: 700px) {
@@ -1454,7 +1467,16 @@ html {
     padding: 15px 0;
     font-size: 1.4rem; } }
 .address {
-  font-size: 2rem; }
+  font-size: 1.5rem; }
+  .address i {
+    vertical-align: middle; }
 
-.address span {
-  font-family: 'Joystix'; }
+.developer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 999; }

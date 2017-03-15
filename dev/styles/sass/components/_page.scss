@@ -2,6 +2,10 @@ html {
 	overflow: hidden;
 }	
 
+.white {
+	color: #fff !important;
+}
+
 #ifsp-container {
 	position: absolute;
 	top: 0;
@@ -124,7 +128,6 @@ html {
 }
 
 .schedule li {
-	padding: 20px 0;
 	font-size: 2rem;
 
 	& a {
@@ -133,26 +136,27 @@ html {
 }
 
 .schedule .time {
-	font-size: 1.5rem;
 	font-family: 'Joystix';
 }
 
 @media only screen and (max-width: $phone-screen) {
 	.schedule li {
-		padding: 5px 0;
 		font-size: 1rem;
 	}
 }
 
 @media only screen and (max-width: $tablet-screen) {
 	.schedule li {
-		padding: 15px 0;
 		font-size: 1.4rem;
 	}
 }
 
 .address {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
+
+	p {
+		margin: 10px 0;
+	}
 
 	i {
 		vertical-align: middle
@@ -160,7 +164,6 @@ html {
 }
 
 .developer {
-	display: block;
     position: fixed;
     bottom: 0;
     right: 0;

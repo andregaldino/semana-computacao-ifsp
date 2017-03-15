@@ -13,12 +13,10 @@ function backgroundDraw() {
 		target = {x: width/2, y: height/2};
 
 		canvas = document.getElementById('ifsp-animate');
-		// grey = "#2c2c2c";
 		white = "#fff";
 		black = "#000";
 		canvas.width = width;
 		canvas.height = height;
-		// canvas.style.backgroundColor = grey;
 		ctx = canvas.getContext('2d');
 		points = [];
 		for(var x = 0; x < width * 2; x = x + width/3) {
@@ -167,8 +165,6 @@ $(document).ready(function() {
 		sectionSelector: '.fp-section',
 		slideSelector: '.fp-slide',
 		controlArrows: false,
-		onLeave: function(index, nextIndex, direction){
-		},
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 			$('.weekdays .btn[data-day='+slideIndex+']').addClass('outline');
 			$('.weekdays .btn[data-day='+nextSlideIndex+']').removeClass('outline');
@@ -184,7 +180,6 @@ $(document).ready(function() {
 	$('.down').click(function () {
 		$.fn.fullpage.moveSectionDown();
 	});
-
 
 	var scrollTo = 0;
 

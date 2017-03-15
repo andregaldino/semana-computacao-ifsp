@@ -1,4 +1,3 @@
-
 (function($) {
   var _stack = 0,
   _lastID = 0,

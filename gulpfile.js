@@ -22,8 +22,8 @@ gulp.task('fonts', function() {
 gulp.task('sass', function() {
 	sass('./dev/styles/sass/ifsp.scss')
 	.on('error', sass.logError)
-	// .pipe(uglifycss())
-	// .pipe(rename({suffix: '.min'}))
+	.pipe(uglifycss())
+	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('./dist/css/'));
 });
 
@@ -33,27 +33,27 @@ gulp.task('jslib', function() {
 		'./node_modules/gsap/src/uncompressed/TweenLite.js', 
 		'./node_modules/fullpage.js/dist/jquery.fullpage.js',
 		'./node_modules/typeit/dist/typeit.js',
-		'./dev/scripts/velocity.min.js',
+		'./node_modules/velocity-animate/velocity.min.js',
 		'./dev/scripts/modal.js',])
 	.pipe(concat('lib.js'))
-	// .pipe(uglify())
-	// .pipe(rename({suffix: '.min'}))
+	.pipe(uglify())
+	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('csslib', function() {
 	return gulp.src(['./node_modules/fullpage.js/dist/jquery.fullpage.css'])
 	.pipe(concat('lib.css'))
-	// .pipe(uglify())
-	// .pipe(rename({suffix: '.min'}))
+	.pipe(uglifycss())
+	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task('js', function() {
 	return gulp.src(['./dev/scripts/maps.js', './dev/scripts/ifsp.js'])
 	.pipe(concat('ifsp.js'))
-	// .pipe(uglify())
-	// .pipe(rename({suffix: '.min'}))
+	.pipe(uglify())
+	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('./dist/js/'));
 });
 
@@ -65,10 +65,4 @@ gulp.task('server', function() {
       baseDir: ['dist', './']
     }
   })
-});
-
-gulp.task('images', function() {
-	gulp.src('./dev/images/*')
-	.pipe(imagemin())
-	.pipe(gulp.dest('./dist/images/'));
 });

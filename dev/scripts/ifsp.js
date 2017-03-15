@@ -165,6 +165,7 @@ $(document).ready(function() {
 		sectionSelector: '.fp-section',
 		slideSelector: '.fp-slide',
 		controlArrows: false,
+		normalScrollElements: '.modal',
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 			$('.weekdays .btn[data-day='+slideIndex+']').addClass('outline');
 			$('.weekdays .btn[data-day='+nextSlideIndex+']').removeClass('outline');
